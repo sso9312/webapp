@@ -47,7 +47,13 @@ drop sequence sungjuk_seq;
 													sno=3			
 												----------------> 수정 sungjukUpdate.jsp 
 	
-
+3) 수정
+	ⓘ sungjukUpdate.jsp
+     수정하고자 행을 DB에서 가져와서(select문), 사용자가 작성했던 내용을 그대로 성적폼에 출력하고
+     sungjukRead.jsp와 sungjukForm.jsp 참조
+     
+    ② sungjukUpdateProc.jsp                                            
+     사용자가 다시 입력한 내용으로 수정(update문)
 ////////////////////////////////////////////////
 
 ● [전체목록]sungjukList.jsp
@@ -61,6 +67,12 @@ select * from sungjuk where sno=?
 
 ● [행삭제]sungjukDel.jsp
 delete from sungjuk where sno=?
+
+● [행수정]
+-> sungjukUpdate.jsp 	 : select문
+-> sungjukUpdateProc.jsp : update sungjuk
+						   set uname=?, kor=?, eng=?, mat=?, aver=?, addr=?, wdate=sysdate
+						   where sno=?
 
 
 
