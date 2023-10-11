@@ -48,9 +48,7 @@
 		out.println(" 	location.href='sungjukList.jsp';");
 		out.println("</script>");
 	}//if end
-	
-	
-	
+
 	
 %>
 </body>
